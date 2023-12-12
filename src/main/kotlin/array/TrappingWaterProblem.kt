@@ -56,3 +56,21 @@ fun getMaximumQuantityOfWaterTrapped(array: Array<Int>): Int {
 
     return result
 }
+
+
+fun getMaximumWaterWithTwoPointer(height: IntArray):Int{
+    var l = 0
+    var r = height.size-1
+    var result = 0
+    var currentArea = 0
+    while (l<r){
+        currentArea =(r-l)*Math.min(height[l],height[r])
+        result = Math.max(result,currentArea)
+        if(height[l]>height[r]){
+            r--
+        }else{
+            l++
+        }
+    }
+    return result
+}

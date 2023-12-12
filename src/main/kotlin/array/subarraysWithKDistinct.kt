@@ -42,7 +42,7 @@ fun subArraysWithKDistinct(nums: IntArray, k: Int): Int {  //1,2,1,3,4
                 removeFromMap(mapB,nums[ism])
                 ism--
             }
-        } 
+        }
 
         while(j<ism){
             f3=true
