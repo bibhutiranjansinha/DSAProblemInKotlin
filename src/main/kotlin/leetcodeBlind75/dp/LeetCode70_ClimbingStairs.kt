@@ -10,7 +10,7 @@ fun climbStairs(n: Int): Int {
     var number=n
     while (number > 0) {
         val temp = b
-        b = a + b
+        b += a
         a = temp
         number--
     }

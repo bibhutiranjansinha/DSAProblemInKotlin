@@ -58,7 +58,7 @@ class TrieNG{
         return collections(prefix,current)
     }
 
-    fun collections(prefix: String,node:TrieNodeNG?):List<String>{
+    private fun collections(prefix: String, node:TrieNodeNG?):List<String>{
         val result = mutableListOf<String>()
         if(node?.isTerminating==true){
             result.add(prefix)
